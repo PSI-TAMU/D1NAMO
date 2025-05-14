@@ -21,7 +21,7 @@ unzip d1namo-ecg-glucose-data.zip
 ```
 
 ## Preprocessing
-After downloading the raw data, one can use the [preprocess.ipynb](./preprocess.ipynb) notebook to process the data. The processed data will be stored in the processed folder.
+After downloading the raw data, one can use the [preprocess.py](./preprocess.py) script to process the data. The processed data will be stored in the processed/cgm folder.
 
 For each processed data, it is saved in a json format that contains multimodal signals within a recorded cgm section (a 5-minute window). In detail, it includes:
 * <b>Index</b>
@@ -33,7 +33,10 @@ For each processed data, it is saved in a json format that contains multimodal s
     * Summary: other relevant metrics
         * 'Time', 'HR', 'BR', 'Posture', 'Activity', 'HRConfidence', 'ECGNoise'
 
-We have also included a [jupyter notebook](./visualize.ipynb) that provides an interactive demo for visualizing the signal. This notebook walks you through key steps in analyzing and processing the data, allowing you to explore and better understand the signal.
+We have also included a [jupyter notebook](./notebooks/visualize.ipynb) that provides an interactive demo for visualizing the signal. This notebook walks you through key steps in analyzing and processing the data, allowing you to explore and better understand the signal.
+
+### Extract Beat
+We also provide the script for extracting the ecg signals into individual beats using [NeuroKit2](https://neuropsychology.github.io/NeuroKit/functions/ecg.html). Please see [extract_beat.py](./extract_beat.py) for more detail.
 
 ## Citation
 ```
