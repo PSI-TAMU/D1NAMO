@@ -26,7 +26,7 @@ After downloading the raw data, one can use the [preprocess.ipynb](./preprocess.
 For each processed data, it is saved in a json format that contains multimodal signals within a recorded cgm section (a 5-minute window). In detail, it includes:
 * <b>Index</b>
 * <b>Timestamp</b>: when the CGM value is being recorded
-* <b>glucose</b>: the recorded glucose value
+* <b>glucose</b>: the recorded glucose value (converted into mg/dL)
 * <b>zephyr</b>:
     * ECG: collected 12-bit filtered ECG signals (250Hz)
         * 'Time', 'EcgWaveform'
